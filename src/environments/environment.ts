@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: '838b428c-15d3-4f6e-b7b8-338790013c8b',
+  apiUrl: 'https://api.TheDogAPI.com/v1'
 };
 
 /*
