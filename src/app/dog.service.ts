@@ -28,7 +28,7 @@ export class DogService {
 
     return this.http.get<Image[]>(environment.apiUrl + '/images/search', {headers: httpHeaders, params: httpParams})
       .pipe(
-        catchError(this.handleError<Image[]>('getImage', ))
+        catchError(this.handleError<Image[]>('getImages', null))
       );
   }
 
