@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorIntercept } from './error.interceptor';
 import { DoggoHomeComponent } from './doggo-home/doggo-home.component';
+import { DoggoBreedComponent } from './doggo-breed/doggo-breed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DoggoHomeComponent
+    DoggoHomeComponent,
+    DoggoBreedComponent
   ],
   imports: [
     BrowserModule,

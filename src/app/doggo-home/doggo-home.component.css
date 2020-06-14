@@ -1,4 +1,10 @@
 img {
-    width: 500px;
+    width: 90%;
     height: auto;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
 }

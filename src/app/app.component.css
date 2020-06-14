@@ -1,5 +1,8 @@
+html, body {
+    width: 100%;
+}
 .page-content{
-    max-width:500px;
+    max-width:1140px;
     margin:auto;
     text-align: center;
 }
