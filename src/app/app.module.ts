@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorIntercept } from './error.interceptor';
+import { DoggoHomeComponent } from './doggo-home/doggo-home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DoggoHomeComponent
   ],
   imports: [
     BrowserModule,
