@@ -1,3 +1,5 @@
+import { Measure } from './measure';
+
 export interface Breed{
    id: string;
    name: string;
@@ -6,7 +8,7 @@ export interface Breed{
    alt_names: string;
    wikipedia_url: string;
    origin: string;
-   weight: object;
+   weight: Measure;
    country_code: string;
-   height: object;
+   height: Measure;
 }

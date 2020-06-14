@@ -1,2 +1,11 @@
-<img src="{{image.url}}" alt="">
-<p>doggo-home works!</p>
+<img src="{{image?.url}}">
+<div *ngFor="let breed of image?.breeds">
+    <p>{{breed.name}}</p>
+    <P>{{breed.temperament}}</P>
+    <p>{{breed.life_span}}</p>
+    <p>{{breed.origin}}</p>
+    <p>{{breed.weight.metric}}</p>
+    <p>{{breed.country_code}}</p>
+    <p>{{breed.height.metric}}</p>
+</div>
+
