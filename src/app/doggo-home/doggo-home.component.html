@@ -1,8 +1,12 @@
 <div class="doggo" *ngIf="image">
-    <img [src]="image.url" alt=""/>
+    <a [href]="image.url" target="_blank" rel="noopener noreferrer">
+        <img [src]="image.url" alt=""/>
+    </a>    
     <ul>
         <li *ngFor="let breed of image.breeds">
             <app-doggo-breed [breed]="breed"></app-doggo-breed>
+            <br>
+            <a [routerLink]="['/gallery', breed.id]" >See more of this breed</a>
         </li>
     </ul>
 </div>

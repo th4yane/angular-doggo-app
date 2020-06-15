@@ -20,10 +20,13 @@ const httpHeaders =  new HttpHeaders({
 export class DogService {
   constructor(private http: HttpClient) { }
 
-  getImages(limit?: number, breed?: number): Observable<Image[]>{
-    const httpParams = new HttpParams()
-      .set('limit', limit?.toString())
-      .set('breed', breed?.toString());
+  getImages(limit: number, breed?: number): Observable<Image[]>{
+    let httpParams = new HttpParams()
+      .set('limit', limit?.toString());
+
+    if (breed != null){
+      httpParams = httpParams.set('breed_id', breed?.toString());
+    }
 
     return this.http.get<Image[]>(
       environment.apiUrl + '/images/search',

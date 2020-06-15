@@ -1,0 +1,6 @@
+<app-doggo-breed></app-doggo-breed>
+<section id="photos">
+    <a *ngFor="let image of images$ | async" [href]="image.url" target="_blank" rel="noopener noreferrer">
+        <img [src]="image.url" alt="" />
+    </a>
+</section>

@@ -8,12 +8,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorIntercept } from './error.interceptor';
 import { DoggoHomeComponent } from './doggo-home/doggo-home.component';
 import { DoggoBreedComponent } from './doggo-breed/doggo-breed.component';
+import { DoggoGalleryComponent } from './doggo-gallery/doggo-gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DoggoHomeComponent,
-    DoggoBreedComponent
+    DoggoBreedComponent,
+    DoggoGalleryComponent
   ],
   imports: [
     BrowserModule,
