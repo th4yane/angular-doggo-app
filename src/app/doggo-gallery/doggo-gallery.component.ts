@@ -3,8 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import {Image} from '../image';
+import { Image } from '../image';
 import { DogService } from '../dog.service';
+import { Breed } from '../breed';
 
 @Component({
   selector: 'app-doggo-gallery',
@@ -13,11 +14,12 @@ import { DogService } from '../dog.service';
 })
 export class DoggoGalleryComponent implements OnInit {
   images$: Observable<Image[]>;
+  breed: Breed;
 
   constructor(
     private route: ActivatedRoute,
     private service: DogService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.images$ = this.route.paramMap.pipe(
@@ -25,5 +27,4 @@ export class DoggoGalleryComponent implements OnInit {
         this.service.getImages(10, +params.get('id')))
     );
   }
-
 }
