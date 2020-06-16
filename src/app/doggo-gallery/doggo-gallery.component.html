@@ -1,4 +1,4 @@
-<app-doggo-breed [breed]="(images$ | async)[0]?.breeds[0]"></app-doggo-breed>
+<app-doggo-breed [breed]="breed$ | async"></app-doggo-breed>
 <section id="photos">
     <a *ngFor="let image of images$ | async" [href]="image.url" target="_blank" rel="noopener noreferrer">
         <img [src]="image.url" alt="" />

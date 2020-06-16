@@ -7,7 +7,8 @@ import { DoggoGalleryComponent } from './doggo-gallery/doggo-gallery.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: DoggoHomeComponent },
-  { path: 'gallery/:id', component: DoggoGalleryComponent}
+  { path: 'gallery/:id', component: DoggoGalleryComponent},
+  { path: 'gallery', component: DoggoGalleryComponent}
 ];
 
 @NgModule({

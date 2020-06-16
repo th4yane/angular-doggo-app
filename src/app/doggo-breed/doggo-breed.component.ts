@@ -9,6 +9,7 @@ import { Breed } from '../breed';
 export class DoggoBreedComponent implements OnInit {
 
   @Input() breed: Breed;
+  @Input() seeMore: boolean;
 
   constructor() { }
 

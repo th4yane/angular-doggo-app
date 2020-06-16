@@ -1,4 +1,5 @@
-<div>
+<div *ngIf="breed; then showBreed else noBreed"></div>
+<ng-template #showBreed>
     <h2>{{breed.name}}</h2>
     <p>{{breed.temperament}}</p>
 
@@ -20,4 +21,11 @@
             <td>{{breed.height.metric}} cm</td>
         </tr>
     </table>
-</div>
+    <a *ngIf="seeMore" [routerLink]="['/gallery', breed.id]">See more</a>
+</ng-template>
+
+<ng-template #noBreed>
+    <div>
+        <h2>Breed not registered</h2>
+    </div>
+</ng-template>

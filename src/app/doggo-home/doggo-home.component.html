@@ -2,7 +2,5 @@
     <a [href]="image.url" target="_blank" rel="noopener noreferrer">
         <img [src]="image.url" alt="" />
     </a>
-    <app-doggo-breed [breed]="image.breeds[0]"></app-doggo-breed>
-    <br/>
-    <a [routerLink]="['/gallery', image.breeds[0].id]">See more of this breed</a>
+    <app-doggo-breed [breed]="image.breeds[0]" [seeMore]="true"></app-doggo-breed>  
 </div>

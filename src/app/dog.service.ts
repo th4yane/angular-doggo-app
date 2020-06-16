@@ -7,6 +7,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Image } from './image';
+import { Breed } from './breed';
 
 
 const httpHeaders =  new HttpHeaders({
@@ -31,6 +32,13 @@ export class DogService {
     return this.http.get<Image[]>(
       environment.apiUrl + '/images/search',
       {headers: httpHeaders, params: httpParams}
+      );
+  }
+
+  getBreed(breedId: number){
+    return this.http.get<Breed>(
+      `${environment.apiUrl}/breeds/${breedId}`,
+      {headers: httpHeaders}
       );
   }
 
