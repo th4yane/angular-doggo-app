@@ -35,11 +35,21 @@ export class DogService {
       );
   }
 
-  getBreed(breedId: number){
+  getBreed(breedId: number): Observable<Breed>{
     return this.http.get<Breed>(
       `${environment.apiUrl}/breeds/${breedId}`,
       {headers: httpHeaders}
       );
+  }
+
+  searchBreed(breedName: string): Observable<Breed[]>{
+    const httpParams = new HttpParams()
+    .set('q', breedName);
+
+    return this.http.get<Breed[]>(
+      `${environment.apiUrl}/breeds/search`,
+      {headers: httpHeaders, params: httpParams}
+    );
   }
 
 }

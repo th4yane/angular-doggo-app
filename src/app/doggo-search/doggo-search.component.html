@@ -1,0 +1,6 @@
+<div class="form-group">
+    <input id="search-doggo" type="text" class="form-control" placeholder="Search a breed" [(ngModel)]="breed"
+        [ngbTypeahead]="search" [inputFormatter]="formatter" [resultFormatter]="formatter"
+        (ngModelChange)="gotoGallery()" [editable]="false" />
+    <small *ngIf="searching" class="form-text text-muted">searching...</small>
+</div>
